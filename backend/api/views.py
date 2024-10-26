@@ -26,7 +26,7 @@ class BoardViewSet(ModelViewSet):
         return Response(data, 200)
 
     @action(["GET"], True, "filter-tasks", "filter-tasks")
-    def filter_tasks(self, request: Request):
+    def filter_tasks(self, request: Request, pk):
         responsible = request.GET.get("responsible")
         from_date = request.GET.get("from_date")
         to_date = request.GET.get("to_date")

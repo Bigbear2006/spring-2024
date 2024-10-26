@@ -1,4 +1,4 @@
-from rest_framework.generics import RetrieveAPIView, CreateAPIView
+from rest_framework.generics import RetrieveAPIView, CreateAPIView, ListAPIView
 from rest_framework.permissions import IsAuthenticated
 
 from . import models, serializers
@@ -15,3 +15,8 @@ class UserInfoAPIView(RetrieveAPIView):
 
     def get_object(self):
         return self.request.user
+
+
+class UsersListApiView(ListAPIView):
+    serializer_class = serializers.UserSerializer
+    queryset = models.User.objects.all()
