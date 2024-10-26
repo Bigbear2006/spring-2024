@@ -8,9 +8,9 @@ class Board(models.Model):
 
 
 class Task(models.Model):
-    BACKLOG_STAGE = "backlog"
-    IN_PROCESS_STAGE = "in process"
-    COMPLETED_STAGE = "completed"
+    BACKLOG_STAGE = "Бэклог"
+    IN_PROCESS_STAGE = "В процессе"
+    COMPLETED_STAGE = "Выполнено"
     stages = (
         (BACKLOG_STAGE, BACKLOG_STAGE),
         (IN_PROCESS_STAGE, IN_PROCESS_STAGE),
