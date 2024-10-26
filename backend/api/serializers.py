@@ -4,12 +4,22 @@ from . import models
 
 
 class BoardSerializer(ModelSerializer):
+    # def to_representation(self, instance):
+    #     data = super(BoardSerializer, self).to_representation(instance)
+    #     data['tasks'] = TaskSerializer(instance=instance.tasks.all(), many=True).data
+    #     return data
+
     class Meta:
         model = models.Board
         fields = '__all__'
 
 
 class TaskSerializer(ModelSerializer):
+    # def to_representation(self, instance):
+    #     data = super(TaskSerializer, self).to_representation(instance)
+    #     data['comments'] = CommentSerializer(instance=instance.comments.all(), many=True).data
+    #     return data
+
     class Meta:
         model = models.Task
         fields = '__all__'

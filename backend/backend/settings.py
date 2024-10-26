@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_cleanup',
     'rest_framework_simplejwt',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
